@@ -30,8 +30,9 @@ if __name__ == '__main__':
 ```
   
 - Visualize
-![](images/ReduceLROnPlateauScheduler.png)
-
+  
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/ReduceLROnPlateauScheduler.png" width=400>
+  
 ### `TransformerLRScheduler`
   
 - Example code
@@ -63,9 +64,10 @@ if __name__ == '__main__':
             ...
             scheduler.step()
 ```
-
+  
 - Visualize
-![](images/TransformerLRScheduler.png)
+  
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/TransformerLRScheduler.png" width=400>
 
 ### `TriStageLRScheduler`
   
@@ -104,7 +106,7 @@ if __name__ == '__main__':
   
 - Visualize
   
-![](images/TriStageLRScheduler.png)
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/TriStageLRScheduler.png" width=400>
   
 ### `WarmupReduceLROnPlateauScheduler`
   
@@ -142,7 +144,7 @@ if __name__ == '__main__':
   
 - Visualize
   
-![](images/WarmupReduceLROnPlateauScheduler.png)
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/WarmupReduceLROnPlateauScheduler.png" width=400>
   
 ### `WarmupLRScheduler`
   
@@ -175,7 +177,7 @@ if __name__ == '__main__':
   
 - Visualize
   
-![](images/WarmupLRScheduler.png)
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/WarmupLRScheduler.png" width=400>
   
 ## Troubleshoots and Contributing
 If you have any questions, bug reports, and feature requests, please [open an issue](https://github.com/sooftware/openspeech/issues) on Github.   
