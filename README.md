@@ -185,7 +185,7 @@ if __name__ == '__main__':
   
   
 ## Troubleshoots and Contributing
-If you have any questions, bug reports, and feature requests, please [open an issue](https://github.com/sooftware/openspeech/issues) on Github.   
+If you have any questions, bug reports, and feature requests, please [open an issue](https://github.com/sooftware/pytorch-lr-scheduler/issues) on Github.   
   
 I appreciate any kind of feedback or contribution.  Feel free to proceed with small issues like bug fixes, documentation improvement.  For major contributions and new features, please discuss with the collaborators in corresponding issues.
   
@@ -193,4 +193,4 @@ I appreciate any kind of feedback or contribution.  Feel free to proceed with sm
 I follow [PEP-8](https://www.python.org/dev/peps/pep-0008/) for code style. Especially the style of docstrings is important to generate documentation. 
   
 ## License
-This project is licensed under the MIT LICENSE - see the [LICENSE.md](https://github.com/sooftware/OpenSpeech/blob/master/LICENSE) file for details
+This project is licensed under the MIT LICENSE - see the [LICENSE.md](https://github.com/sooftware/pytorch-lr-scheduler/blob/master/LICENSE) file for details
