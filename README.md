@@ -5,6 +5,10 @@ PyTorch implementation of some learning rate schedulers for deep learning resear
   
 ### `ReduceLROnPlateauScheduler`  
   
+- Visualize
+  
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/ReduceLROnPlateauScheduler.png" width=400>
+  
 - Example code
   
 ```python
@@ -29,11 +33,12 @@ if __name__ == '__main__':
         scheduler.step(val_loss)
 ```
   
-- Visualize
-  
-<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/ReduceLROnPlateauScheduler.png" width=400>
   
 ### `TransformerLRScheduler`
+  
+- Visualize
+  
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/TransformerLRScheduler.png" width=400>
   
 - Example code
   
@@ -65,11 +70,12 @@ if __name__ == '__main__':
             scheduler.step()
 ```
   
-- Visualize
-  
-<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/TransformerLRScheduler.png" width=400>
 
 ### `TriStageLRScheduler`
+  
+- Visualize
+  
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/TriStageLRScheduler.png" width=400>
   
 - Example code
   
@@ -104,11 +110,12 @@ if __name__ == '__main__':
             scheduler.step()
 ```
   
-- Visualize
-  
-<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/TriStageLRScheduler.png" width=400>
   
 ### `WarmupReduceLROnPlateauScheduler`
+  
+- Visualize
+  
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/WarmupReduceLROnPlateauScheduler.png" width=400>
   
 - Example code
 ```python
@@ -142,11 +149,12 @@ if __name__ == '__main__':
         scheduler.step(val_loss)
 ```
   
-- Visualize
-  
-<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/WarmupReduceLROnPlateauScheduler.png" width=400>
   
 ### `WarmupLRScheduler`
+  
+- Visualize
+  
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/WarmupLRScheduler.png" width=400>
   
 - Example code
   
@@ -175,9 +183,6 @@ if __name__ == '__main__':
             scheduler.step()
 ```
   
-- Visualize
-  
-<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/WarmupLRScheduler.png" width=400>
   
 ## Troubleshoots and Contributing
 If you have any questions, bug reports, and feature requests, please [open an issue](https://github.com/sooftware/openspeech/issues) on Github.   
