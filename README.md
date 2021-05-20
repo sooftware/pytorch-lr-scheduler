@@ -3,7 +3,7 @@ PyTorch implementation of some learning rate schedulers for deep learning resear
   
 ## Usage
   
-### `ReduceLROnPlateauScheduler`  
+### [`ReduceLROnPlateauScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/reduce_lr_on_plateau_lr_scheduler.py)  
   
 - Visualize
   
@@ -34,7 +34,7 @@ if __name__ == '__main__':
 ```
   
   
-### `TransformerLRScheduler`
+### [`TransformerLRScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/transformer_lr_scheduler.py)
   
 - Visualize
   
@@ -71,7 +71,7 @@ if __name__ == '__main__':
 ```
   
 
-### `TriStageLRScheduler`
+### [`TriStageLRScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/tri_stage_lr_scheduler.py)
   
 - Visualize
   
@@ -111,7 +111,7 @@ if __name__ == '__main__':
 ```
   
   
-### `WarmupReduceLROnPlateauScheduler`
+### [`WarmupReduceLROnPlateauScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/warmup_reduce_lr_on_plateau_scheduler.py)
   
 - Visualize
   
@@ -150,7 +150,7 @@ if __name__ == '__main__':
 ```
   
   
-### `WarmupLRScheduler`
+### [`WarmupLRScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/warmup_lr_scheduler.py)
   
 - Visualize
   
@@ -189,8 +189,8 @@ If you have any questions, bug reports, and feature requests, please [open an is
   
 I appreciate any kind of feedback or contribution.  Feel free to proceed with small issues like bug fixes, documentation improvement.  For major contributions and new features, please discuss with the collaborators in corresponding issues.
   
-### Code Style
+## Code Style
 I follow [PEP-8](https://www.python.org/dev/peps/pep-0008/) for code style. Especially the style of docstrings is important to generate documentation. 
   
-### License
+## License
 This project is licensed under the MIT LICENSE - see the [LICENSE.md](https://github.com/sooftware/OpenSpeech/blob/master/LICENSE) file for details
