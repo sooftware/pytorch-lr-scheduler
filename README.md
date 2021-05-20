@@ -3,36 +3,43 @@ PyTorch implementation of some learning rate schedulers for deep learning resear
   
 ## Usage
   
-### [`ReduceLROnPlateauScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/reduce_lr_on_plateau_lr_scheduler.py)  
+### [`WarmupReduceLROnPlateauScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/warmup_reduce_lr_on_plateau_scheduler.py)
   
 - Visualize
   
-<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/ReduceLROnPlateauScheduler.png" width=400>
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/WarmupReduceLROnPlateauScheduler.png" width=400>
   
 - Example code
-  
 ```python
 import torch
 
-from lr_scheduler.reduce_lr_on_plateau_lr_scheduler import ReduceLROnPlateauScheduler
+from lr_scheduler.warmup_reduce_lr_on_plateau_scheduler import WarmupReduceLROnPlateauScheduler
 
 if __name__ == '__main__':
     max_epochs, steps_in_epoch = 10, 10000
 
     model = [torch.nn.Parameter(torch.randn(2, 2, requires_grad=True))]
-    optimizer = torch.optim.Adam(model, 1e-4)
+    optimizer = torch.optim.Adam(model, 1e-10)
 
-    scheduler = ReduceLROnPlateauScheduler(optimizer, patience=1, factor=0.3)
+    scheduler = WarmupReduceLROnPlateauScheduler(
+        optimizer, 
+        init_lr=1e-10, 
+        peak_lr=1e-4, 
+        warmup_steps=30000, 
+        patience=1,
+        factor=0.3,
+    )
 
     for epoch in range(max_epochs):
         for timestep in range(steps_in_epoch):
             ...
             ...
-        
+            if timestep < warmup_steps:
+                scheduler.step()
+                
         val_loss = validate()
         scheduler.step(val_loss)
 ```
-  
   
 ### [`TransformerLRScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/transformer_lr_scheduler.py)
   
@@ -70,7 +77,6 @@ if __name__ == '__main__':
             scheduler.step()
 ```
   
-
 ### [`TriStageLRScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/tri_stage_lr_scheduler.py)
   
 - Visualize
@@ -110,44 +116,36 @@ if __name__ == '__main__':
             scheduler.step()
 ```
   
-  
-### [`WarmupReduceLROnPlateauScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/warmup_reduce_lr_on_plateau_scheduler.py)
+### [`ReduceLROnPlateauScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/reduce_lr_on_plateau_lr_scheduler.py)  
   
 - Visualize
   
-<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/WarmupReduceLROnPlateauScheduler.png" width=400>
+<img src="https://github.com/sooftware/pytorch-lr-scheduler/blob/main/images/ReduceLROnPlateauScheduler.png" width=400>
   
 - Example code
+  
 ```python
 import torch
 
-from lr_scheduler.warmup_reduce_lr_on_plateau_scheduler import WarmupReduceLROnPlateauScheduler
+from lr_scheduler.reduce_lr_on_plateau_lr_scheduler import ReduceLROnPlateauScheduler
 
 if __name__ == '__main__':
     max_epochs, steps_in_epoch = 10, 10000
 
     model = [torch.nn.Parameter(torch.randn(2, 2, requires_grad=True))]
-    optimizer = torch.optim.Adam(model, 1e-10)
+    optimizer = torch.optim.Adam(model, 1e-4)
 
-    scheduler = WarmupReduceLROnPlateauScheduler(
-        optimizer, 
-        init_lr=1e-10, 
-        peak_lr=1e-4, 
-        warmup_steps=30000, 
-        patience=1,
-        factor=0.3,
-    )
+    scheduler = ReduceLROnPlateauScheduler(optimizer, patience=1, factor=0.3)
 
     for epoch in range(max_epochs):
         for timestep in range(steps_in_epoch):
             ...
             ...
-            if timestep < warmup_steps:
-                scheduler.step()
-                
+        
         val_loss = validate()
         scheduler.step(val_loss)
 ```
+  
   
   
 ### [`WarmupLRScheduler`](https://github.com/sooftware/pytorch-lr-scheduler/blob/main/lr_scheduler/warmup_lr_scheduler.py)
