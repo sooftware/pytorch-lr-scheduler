@@ -182,6 +182,13 @@ if __name__ == '__main__':
 ```
   
   
+## Installation
+```bash
+git clone git@github.com:sooftware/pytorch-lr-scheduler.git
+cd pytorch-lr-scheduler
+pip install .
+```
+
 ## Troubleshoots and Contributing
 If you have any questions, bug reports, and feature requests, please [open an issue](https://github.com/sooftware/pytorch-lr-scheduler/issues) on Github.   
   
